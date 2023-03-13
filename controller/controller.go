@@ -19,7 +19,7 @@ func PostWhatsAuthRequest(c *fiber.Ctx) error {
 		if err != nil {
 			return err
 		}
-		ntfbtn := whatsauth.RunModule(req, config.PrivateKey, config.Usertables[:], config.Ulbimariaconn)
+		ntfbtn := whatsauth.RunModuleLegacy(req, config.PrivateKey, config.Usertables[:], config.Ulbimariaconn)
 		return c.JSON(ntfbtn)
 	} else {
 		var ws whatsauth.WhatsauthStatus
