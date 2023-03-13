@@ -2,10 +2,10 @@ package controller
 
 import (
 	"github.com/aiteung/musik"
-	"github.com/rofinafiin/iteung/config"
-
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
+	"github.com/rofinafiin/hdbackend"
+	"github.com/rofinafiin/iteung/config"
 	"github.com/whatsauth/whatsauth"
 )
 
@@ -32,5 +32,11 @@ func PostWhatsAuthRequest(c *fiber.Ctx) error {
 
 func GetHome(c *fiber.Ctx) error {
 	getip := musik.GetIPaddress()
+	return c.JSON(getip)
+}
+
+func GetdataHD(c *fiber.Ctx) error {
+	getip := hdbackend.GetDataCompFromStatus("Aktif", config.MongoConn, "data_complain")
+	// return c.JSON(getip)
 	return c.JSON(getip)
 }
