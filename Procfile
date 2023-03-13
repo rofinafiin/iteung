@@ -1,1 +1,1 @@
-main: bin/gocroot-1214017
+main: bin/gocroot-baru
