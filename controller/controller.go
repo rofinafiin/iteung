@@ -36,7 +36,7 @@ func GetHome(c *fiber.Ctx) error {
 }
 
 func GetdataHD(c *fiber.Ctx) error {
-	getip := hdbackend.GetDataCompFromStatus("Aktif", config.MongoConn, "data_complain")
+	getip := hdbackend.GetDataAllbyStats("Aktif", config.MongoConn, "data_complain")
 	// return c.JSON(getip)
 	return c.JSON(getip)
 }
