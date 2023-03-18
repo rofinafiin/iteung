@@ -9,6 +9,9 @@ import (
 	"github.com/whatsauth/whatsauth"
 )
 
+var Helpercol = "helperdata"
+var Datacomcol = "data_complain"
+
 func WsWhatsAuthQR(c *websocket.Conn) {
 	whatsauth.RunSocket(c, config.PublicKey, config.Usertables[:], config.Ulbimariaconn)
 }
@@ -36,11 +39,12 @@ func GetHome(c *fiber.Ctx) error {
 }
 
 func GetdataHD(c *fiber.Ctx) error {
-	getstats := hdbackend.GetDataAllbyStats("Aktif", config.MongoConn, "data_complain")
+	getstats := hdbackend.GetDataAllbyStats("Aktif", config.MongoConn, Datacomcol)
 	return c.JSON(getstats)
 }
 
 func GetdataHelper(c *fiber.Ctx) error {
-	getdata := hdbackend.GetDataHelperFromPhone("085156007137", config.MongoConn, "helperdata")
+	hp := c.Params("handphone")
+	getdata := hdbackend.GetDataHelperFromPhone(hp, config.MongoConn, Helpercol)
 	return c.JSON(getdata)
 }
