@@ -48,3 +48,9 @@ func GetdataHelper(c *fiber.Ctx) error {
 	getdata := hdbackend.GetDataHelperFromPhone(hp, config.MongoConn, Helpercol)
 	return c.JSON(getdata)
 }
+
+func GetDataComplainbyNumber(c *fiber.Ctx) error {
+	hp := c.Params("status")
+	crot := hdbackend.GetDataCompFromStatus(hp, config.MongoConn, Datacomcol)
+	return c.JSON(crot)
+}
