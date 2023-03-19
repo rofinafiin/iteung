@@ -14,4 +14,5 @@ func Web(page *fiber.App) {
 	page.Get("/hd", controller.GetdataHD)
 	page.Get("/helper/:handphone", controller.GetdataHelper)
 	page.Get("/data/:status", controller.GetDataComplainbyNumber)
+	page.Get("/jumlah/:tahun", controller.GetJumlahComplain)
 }

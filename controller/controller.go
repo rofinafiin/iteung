@@ -11,6 +11,7 @@ import (
 
 var Helpercol = "helperdata"
 var Datacomcol = "data_complain"
+var JumlahcompCol = "jumlah_complain"
 
 func WsWhatsAuthQR(c *websocket.Conn) {
 	whatsauth.RunSocket(c, config.PublicKey, config.Usertables[:], config.Ulbimariaconn)
@@ -52,5 +53,11 @@ func GetdataHelper(c *fiber.Ctx) error {
 func GetDataComplainbyNumber(c *fiber.Ctx) error {
 	hp := c.Params("status")
 	crot := hdbackend.GetDataCompFromStatus(hp, config.MongoConn, Datacomcol)
+	return c.JSON(crot)
+}
+
+func GetJumlahComplain(c *fiber.Ctx) error {
+	thn := c.Params("tahun")
+	crot := hdbackend.GetDataJumlah(thn, config.MongoConn, JumlahcompCol)
 	return c.JSON(crot)
 }
