@@ -79,10 +79,7 @@ func InsertData(c *fiber.Ctx) error {
 }
 
 func InsertDataComplain(c *fiber.Ctx) error {
-	//note := new(modeljumlah)
-	err := hdbackend.InsertJumlahComplain(config.MongoConn, "testing", "testing", "testing")
-	if err != nil {
-		return fiber.NewError(fiber.StatusBadRequest, "Parameter tidak lengkap")
-	}
+	note := new(modeljumlah)
+	err := hdbackend.InsertJumlahComplain(config.MongoConn, note.Bulan, note.Tahun, note.Jumlah)
 	return c.JSON(err)
 }
