@@ -13,6 +13,12 @@ var Helpercol = "helperdata"
 var Datacomcol = "data_complain"
 var JumlahcompCol = "jumlah_complain"
 
+type modeljumlah struct {
+	Bulan  string `bson:"bulan,omitempty" json:"bulan,omitempty"`
+	Tahun  string `bson:"tahun,omitempty" json:"tahun,omitempty"`
+	Jumlah string `bson:"jumlah,omitempty" json:"jumlah,omitempty"`
+}
+
 func WsWhatsAuthQR(c *websocket.Conn) {
 	whatsauth.RunSocket(c, config.PublicKey, config.Usertables[:], config.Ulbimariaconn)
 }
@@ -73,8 +79,8 @@ func InsertData(c *fiber.Ctx) error {
 }
 
 func InsertDataComplain(c *fiber.Ctx) error {
-	model := new(hdbackend.JumlahComplain)
-	ins := hdbackend.InsertJumlahComplain(config.MongoConn, model.Bulan, model.Tahun, model.Jumlah)
+	//model := new(modeljumlah)
+	ins := hdbackend.InsertJumlahComplain(config.MongoConn, "Mei", "2023", "20")
 	err := c.BodyParser(ins)
 	if err != nil {
 		fiber.NewError(fiber.StatusBadRequest)
