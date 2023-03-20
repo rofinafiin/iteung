@@ -79,7 +79,9 @@ func InsertData(c *fiber.Ctx) error {
 }
 
 func InsertDataComplain(c *fiber.Ctx) error {
-	note := new(modeljumlah)
-	err := hdbackend.InsertJumlahComplain(config.MongoConn, note.Bulan, note.Tahun, note.Jumlah)
+	note := c.Params("bulan")
+	suy := c.Params("tahun")
+	sip := c.Params("jumlah")
+	err := hdbackend.InsertJumlahComplain(config.MongoConn, note, suy, sip)
 	return c.JSON(err)
 }
