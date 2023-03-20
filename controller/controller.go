@@ -61,3 +61,13 @@ func GetJumlahComplain(c *fiber.Ctx) error {
 	crot := hdbackend.GetDataJumlah(thn, config.MongoConn, JumlahcompCol)
 	return c.JSON(crot)
 }
+
+func InsertData(c *fiber.Ctx) error {
+	model := new(hdbackend.DataComplain)
+	insdata := hdbackend.InsertDataComp(config.MongoConn,
+		model.Sistemcomp,
+		model.Status,
+		model.Biodata,
+	)
+	return c.JSON(insdata)
+}
