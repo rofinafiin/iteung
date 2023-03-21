@@ -81,11 +81,13 @@ func InsertData(c *fiber.Ctx) error {
 
 func InsertDataComplain(c *fiber.Ctx) error {
 	database := config.MongoConn
+	jumlahcollection := "jumlah_complain"
 	var jumlah JumlahComplain
 	if err := c.BodyParser(&jumlah); err != nil {
 		return err
 	}
 	Inserted := hdbackend.InsertJumlahComplain(database,
+		jumlahcollection,
 		jumlah.Bulan,
 		jumlah.Tahun,
 		jumlah.Jumlah,

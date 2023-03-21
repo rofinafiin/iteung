@@ -99,6 +99,8 @@ github.com/rofinafiin/hdbackend v0.1.9 h1:OHoCw3r2TJxKalbJFFY8kohnG8L0c3g09zfbMH
 github.com/rofinafiin/hdbackend v0.1.9/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
 github.com/rofinafiin/hdbackend v0.1.12 h1:uk9ergEShaABy4zaKvbEh6pVrdgI/ewcrb7NVjXr5/k=
 github.com/rofinafiin/hdbackend v0.1.12/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
+github.com/rofinafiin/hdbackend v0.1.13 h1:kJa/ZafkXbs9W5Llq+hyqYkwxqYKdrmyUbtD8M4v6DI=
+github.com/rofinafiin/hdbackend v0.1.13/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
 github.com/rogpeppe/go-internal v1.9.0 h1:73kH8U+JUqXU8lRuOHeVHaa/SZPifC7BkcraZVejAe8=
 github.com/savsgio/dictpool v0.0.0-20221023140959-7bf2e61cea94 h1:rmMl4fXJhKMNWl+K+r/fq4FbbKI+Ia2m9hYBLm2h4G4=
 github.com/savsgio/dictpool v0.0.0-20221023140959-7bf2e61cea94/go.mod h1:90zrgN3D/WJsDd1iXHT96alCoN2KJo6/4x1DZC3wZs8=
