@@ -20,7 +20,7 @@ var origins = []string{
 	"https://whatsauth.github.io",
 	"https://rofinafiin.github.io",
 	"https://gocroot.github.io/",
-	"https://gocroot-baru.herokuapp.com",
+	"https://gocroot-baru.herokuapp.com/",
 }
 
 var Internalhost string = os.Getenv("INTERNALHOST") + ":" + os.Getenv("PORT")
