@@ -7,15 +7,16 @@ import (
 	"github.com/rofinafiin/hdbackend"
 	"github.com/rofinafiin/iteung/config"
 	"github.com/whatsauth/whatsauth"
+	"net/http"
 )
 
 var Helpercol = "helperdata"
 var Datacomcol = "data_complain"
 var JumlahcompCol = "jumlah_complain"
 
-type modeljumlah struct {
+type JumlahComplain struct {
+	Tahun  string `bson:"tahun,omitempty" json:"jumlah,omitempty"`
 	Bulan  string `bson:"bulan,omitempty" json:"bulan,omitempty"`
-	Tahun  string `bson:"tahun,omitempty" json:"tahun,omitempty"`
 	Jumlah string `bson:"jumlah,omitempty" json:"jumlah,omitempty"`
 }
 
@@ -79,12 +80,19 @@ func InsertData(c *fiber.Ctx) error {
 }
 
 func InsertDataComplain(c *fiber.Ctx) error {
-	note := new(modeljumlah)
-
-	err := hdbackend.InsertJumlahComplain(config.MongoConn, note.Bulan, note.Tahun, note.Jumlah)
-	if err != nil {
-		fiber.NewError(fiber.StatusBadRequest)
+	database := config.MongoConn
+	var jumlah JumlahComplain
+	if err := c.BodyParser(&jumlah); err != nil {
+		return err
 	}
-
-	return c.JSON(note)
+	Inserted := hdbackend.InsertJumlahComplain(database,
+		jumlah.Bulan,
+		jumlah.Tahun,
+		jumlah.Jumlah,
+	)
+	return c.JSON(map[string]interface{}{
+		"status":      http.StatusOK,
+		"message":     "Data berhasil disimpan.",
+		"inserted_id": Inserted,
+	})
 }
