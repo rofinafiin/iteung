@@ -93,14 +93,6 @@ github.com/pmezard/go-difflib v1.0.0 h1:4DBwDE0NGyQoBHbLQYPwSUPoCMWR5BEzIk/f1lZb
 github.com/pmezard/go-difflib v1.0.0/go.mod h1:iKH77koFhYxTK1pcRnkKkqfTogsbg7gZNVY4sRDYZ/4=
 github.com/rivo/uniseg v0.2.0 h1:S1pD9weZBuJdFmowNwbpi7BJ8TNftyUImj/0WQi72jY=
 github.com/rivo/uniseg v0.2.0/go.mod h1:J6wj4VEh+S6ZtnVlnTBMWIodfgj8LQOQFoIToxlJtxc=
-github.com/rofinafiin/hdbackend v0.1.7 h1:HS1y2K59UvZFEFF6qCaIYR1bktlSnl1rO19lgqCxv9U=
-github.com/rofinafiin/hdbackend v0.1.7/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
-github.com/rofinafiin/hdbackend v0.1.9 h1:OHoCw3r2TJxKalbJFFY8kohnG8L0c3g09zfbMHVb7F0=
-github.com/rofinafiin/hdbackend v0.1.9/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
-github.com/rofinafiin/hdbackend v0.1.12 h1:uk9ergEShaABy4zaKvbEh6pVrdgI/ewcrb7NVjXr5/k=
-github.com/rofinafiin/hdbackend v0.1.12/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
-github.com/rofinafiin/hdbackend v0.1.13 h1:kJa/ZafkXbs9W5Llq+hyqYkwxqYKdrmyUbtD8M4v6DI=
-github.com/rofinafiin/hdbackend v0.1.13/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
 github.com/rofinafiin/hdbackend v0.1.15 h1:jOUH9vWR93LwXGU9oOhEOO7RGhQKmYCpPv514F7cWuk=
 github.com/rofinafiin/hdbackend v0.1.15/go.mod h1:vKn0NTCpSpLlcU/4dPJja8xaa8ZMxoH3ZfnC1MSos+0=
 github.com/rogpeppe/go-internal v1.9.0 h1:73kH8U+JUqXU8lRuOHeVHaa/SZPifC7BkcraZVejAe8=
