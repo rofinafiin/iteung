@@ -10,7 +10,7 @@ require (
 	github.com/whatsauth/whatsauth v0.1.83
 )
 
-require github.com/gocroot/kampus v0.0.1 // indirect
+require github.com/gocroot/kampus v0.0.2 // indirect
 
 require (
 	aidanwoods.dev/go-paseto v1.2.0 // indirect
