@@ -1,13 +1,15 @@
 package controller
 
 import (
+	"net/http"
+
 	"github.com/aiteung/musik"
+	kmmdl "github.com/gocroot/kampus/model"
+	kampus "github.com/gocroot/kampus/module"
 	"github.com/gofiber/fiber/v2"
 	"github.com/gofiber/websocket/v2"
-	"github.com/rofinafiin/hdbackend"
 	"github.com/rofinafiin/iteung/config"
 	"github.com/whatsauth/whatsauth"
-	"net/http"
 )
 
 var Helpercol = "helperdata"
@@ -41,31 +43,31 @@ func GetHome(c *fiber.Ctx) error {
 }
 
 func GetdataHD(c *fiber.Ctx) error {
-	getstats := hdbackend.GetDataAllbyStats("Aktif", config.MongoConn, Datacomcol)
+	getstats := kampus.GetDataAllbyStats("Aktif", config.MongoConn, Datacomcol)
 	return c.JSON(getstats)
 }
 
 func GetdataHelper(c *fiber.Ctx) error {
 	hp := c.Params("handphone")
-	getdata := hdbackend.GetDataHelperFromPhone(hp, config.MongoConn, Helpercol)
+	getdata := kampus.GetDataHelperFromPhone(hp, config.MongoConn, Helpercol)
 	return c.JSON(getdata)
 }
 
 func GetDataComplainbyNumber(c *fiber.Ctx) error {
 	hp := c.Params("status")
-	crot := hdbackend.GetDataCompFromStatus(hp, config.MongoConn, Datacomcol)
+	crot := kampus.GetDataCompFromStatus(hp, config.MongoConn, Datacomcol)
 	return c.JSON(crot)
 }
 
 func GetJumlahComplain(c *fiber.Ctx) error {
 	thn := c.Params("tahun")
-	crot := hdbackend.GetDataJumlah(thn, config.MongoConn, JumlahcompCol)
+	crot := kampus.GetDataJumlah(thn, config.MongoConn, JumlahcompCol)
 	return c.JSON(crot)
 }
 
 func InsertData(c *fiber.Ctx) error {
-	model := new(hdbackend.DataComplain)
-	insdata := hdbackend.InsertDataComp(config.MongoConn,
+	model := new(kmmdl.DataComplainhd)
+	insdata := kampus.InsertDataComp(config.MongoConn,
 		model.Sistemcomp,
 		model.Status,
 		model.Biodata,
@@ -75,11 +77,11 @@ func InsertData(c *fiber.Ctx) error {
 
 func InsertDataComplain(c *fiber.Ctx) error {
 	database := config.MongoConn
-	var jumlah hdbackend.JumlahComplain
+	var jumlah kmmdl.JumlahComplainhd
 	if err := c.BodyParser(&jumlah); err != nil {
 		return err
 	}
-	Inserted := hdbackend.InsertJumlahComplain(database,
+	Inserted := kampus.InsertJumlahComplain(database,
 		JumlahcompCol,
 		jumlah.Bulan,
 		jumlah.Tahun,

@@ -11,6 +11,8 @@ github.com/aiteung/atapi v0.0.10 h1:n2UpykaSIlFrdfrEaTU27/y1gXZ0KMAJLypNH4eb+so=
 github.com/aiteung/atapi v0.0.10/go.mod h1:WRmSafqlDpo8PqT1NxoobjVEXkk7vJ6fj7bzh0MTzkM=
 github.com/aiteung/atdb v0.0.6 h1:sz97Idpt/iFbYLBQ4VcHE4GorXo2jnxtt+ThSEl8H3M=
 github.com/aiteung/atdb v0.0.6/go.mod h1:U+xFQGZBp2M3G0geymG21gUWQ/pEBkAr9yHXu54pvMc=
+github.com/aiteung/atdb v0.0.10 h1:DAH7bGDP00WQVLmZQ6QzxSiSip9o0V6BuSE3wvQtw5I=
+github.com/aiteung/atdb v0.0.10/go.mod h1:LpKJzlCiFzTCiIsRTO3olNTnP4dzrt0KB/hxUVicoqs=
 github.com/aiteung/atmessage v0.0.2 h1:5VOnDspFoxQfgy9C8yd4mr6EfNMpI2c44Xa16E4C8kU=
 github.com/aiteung/atmessage v0.0.2/go.mod h1:Jtm6W8M27R5Z7SgV7nOHWGv0AZ6JvwtCVBarlbcZvoo=
 github.com/aiteung/atmodel v0.0.2 h1:eAQ+yKP1trqWi3cot+1b33Av/dkK9+1+tsO0aZAsUTM=
@@ -28,6 +30,8 @@ github.com/fasthttp/websocket v1.5.1 h1:iZsMv5OtZ1E52hhCnlOm/feLCrPhutlrZgvEGcZa
 github.com/fasthttp/websocket v1.5.1/go.mod h1:s+gJkEn38QXLkNfOe/n75Yb8we+VEho1vYqeUYheomw=
 github.com/go-sql-driver/mysql v1.7.0 h1:ueSltNNllEqE3qcWBTD0iQd3IpL/6U+mJxLkazJ7YPc=
 github.com/go-sql-driver/mysql v1.7.0/go.mod h1:OXbVy3sEdcQ2Doequ6Z5BW6fXNQTmx+9S1MCJN5yJMI=
+github.com/gocroot/kampus v0.0.1 h1:mf+kniBwC47IXbLCtUZchiY0eU5SuObJzPMFEDJFWdc=
+github.com/gocroot/kampus v0.0.1/go.mod h1:JcZAV6tg/2TY75idsNQeiJIr+42Aqlw3krl67M9qaOQ=
 github.com/gofiber/fiber/v2 v2.42.0 h1:Fnp7ybWvS+sjNQsFvkhf4G8OhXswvB6Vee8hM/LyS+8=
 github.com/gofiber/fiber/v2 v2.42.0/go.mod h1:3+SGNjqMh5VQH5Vz2Wdi43zTIV16ktlFd3x3R6O1Zlc=
 github.com/gofiber/websocket/v2 v2.1.4 h1:Ki6L7auleAwgi7iRmtUiWKltlbmtkCJ0COtK1nt8L3g=
@@ -142,6 +146,8 @@ go.mau.fi/whatsmeow v0.0.0-20230306190159-5caded34a872 h1:jrIWy0l9kTxl7bdp3muFof
 go.mau.fi/whatsmeow v0.0.0-20230306190159-5caded34a872/go.mod h1:zoTtv1CupGEyTew7TOwnBmTbHB4pVad2OzjTf5CVwa0=
 go.mongodb.org/mongo-driver v1.11.2 h1:+1v2rDQUWNcGW7/7E0Jvdz51V38XXxJfhzbV17aNHCw=
 go.mongodb.org/mongo-driver v1.11.2/go.mod h1:s7p5vEtfbeR1gYi6pnj3c3/urpbLv2T5Sfd6Rp2HBB8=
+go.mongodb.org/mongo-driver v1.11.4 h1:4ayjakA013OdpGyL2K3ZqylTac/rMjrJOMZ1EHizXas=
+go.mongodb.org/mongo-driver v1.11.4/go.mod h1:PTSz5yu21bkT/wXpkS7WR5f0ddqw5quethTUn9WM+2g=
 golang.org/x/crypto v0.0.0-20190308221718-c2843e01d9a2/go.mod h1:djNgcEr1/C05ACkg1iLfiJU5Ep61QUkGW8qpdssI0+w=
 golang.org/x/crypto v0.0.0-20191011191535-87dc89f01550/go.mod h1:yigFU9vqHzYiE8UmvKecakEJjdnWj3jj499lnFckfCI=
 golang.org/x/crypto v0.0.0-20200622213623-75b288015ac9/go.mod h1:LzIPMQfyMNhhGPhUkYOs5KpL4U8rLKemX1yGLhDgUto=

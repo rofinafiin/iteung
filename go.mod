@@ -3,12 +3,14 @@ module github.com/rofinafiin/iteung
 go 1.19
 
 require (
-	github.com/aiteung/atdb v0.0.6
+	github.com/aiteung/atdb v0.0.10
 	github.com/aiteung/musik v0.0.5
 	github.com/gofiber/fiber/v2 v2.42.0
 	github.com/gofiber/websocket/v2 v2.1.4
 	github.com/whatsauth/whatsauth v0.1.83
 )
+
+require github.com/gocroot/kampus v0.0.1 // indirect
 
 require (
 	aidanwoods.dev/go-paseto v1.2.0 // indirect
@@ -48,7 +50,7 @@ require (
 	github.com/youmark/pkcs8 v0.0.0-20181117223130-1be2e3e5546d // indirect
 	go.mau.fi/libsignal v0.1.0 // indirect
 	go.mau.fi/whatsmeow v0.0.0-20230306190159-5caded34a872 // indirect
-	go.mongodb.org/mongo-driver v1.11.2 // indirect
+	go.mongodb.org/mongo-driver v1.11.4 // indirect
 	golang.org/x/crypto v0.5.0 // indirect
 	golang.org/x/sync v0.0.0-20210220032951-036812b2e83c // indirect
 	golang.org/x/sys v0.4.0 // indirect
