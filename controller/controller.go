@@ -1,12 +1,14 @@
 package controller
 
 import (
+	"github.com/rofinafiin/hdbackend"
 	"net/http"
 
 	"github.com/aiteung/musik"
 	kmmdl "github.com/gocroot/kampus/model"
 	kampus "github.com/gocroot/kampus/module"
 	"github.com/gofiber/fiber/v2"
+
 	"github.com/gofiber/websocket/v2"
 	"github.com/rofinafiin/iteung/config"
 	"github.com/whatsauth/whatsauth"
@@ -87,6 +89,22 @@ func InsertDataComplain(c *fiber.Ctx) error {
 		jumlah.Tahun,
 		jumlah.Jumlah,
 	)
+	return c.JSON(map[string]interface{}{
+		"status":      http.StatusOK,
+		"message":     "Data berhasil disimpan.",
+		"inserted_id": Inserted,
+	})
+}
+
+func InsertDataCritics(c *fiber.Ctx) error {
+	database := config.MongoConn
+	var crtc hdbackend.Critics
+	if err := c.BodyParser(&crtc); err != nil {
+		return err
+	}
+	Inserted := hdbackend.InsertCritics(database,
+		crtc.Name,
+		crtc.CriticVal)
 	return c.JSON(map[string]interface{}{
 		"status":      http.StatusOK,
 		"message":     "Data berhasil disimpan.",

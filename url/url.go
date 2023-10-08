@@ -17,4 +17,5 @@ func Web(page *fiber.App) {
 	page.Get("/jumlah/:tahun", controller.GetJumlahComplain)
 	page.Post("/insert", controller.InsertData)
 	page.Post("/insertjum", controller.InsertDataComplain)
+	page.Post("/insertkritik", controller.InsertDataCritics)
 }
